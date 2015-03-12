@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace CricketCrickey_
 {
-    class Model
+    internal class Model
     {
+<<<<<<< HEAD
 
 
         public bool OptionToBat()
@@ -23,5 +24,32 @@ namespace CricketCrickey_
             return false;
 
         }
+=======
+        int TotalScore = 0;
+
+        private Random rnd = new Random();
+
+       
+        
+        public int StraightDrive()
+        {
+            int X = rnd.Next(0, 11);
+
+            if (X == 1)
+            {
+                return 6;
+            }
+
+            if (X > 1 && X < 4)
+            {
+                return 4;
+            }
+
+            return 1;
+            
+
+        }
+
+>>>>>>> origin
     }
 }
