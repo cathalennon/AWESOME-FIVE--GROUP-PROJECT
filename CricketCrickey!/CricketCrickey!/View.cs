@@ -8,5 +8,16 @@ namespace CricketCrickey_
 {
     class View
     {
+
+
+
+
+        public void OptionChosen(Model x)
+        {
+            if (x.OptionToBat())
+            {
+                Console.WriteLine("Cograts!!! You have Chosen To bat "); 
+            }
+        }
     }
 }
