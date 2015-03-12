@@ -6,20 +6,32 @@ using System.Threading.Tasks;
 
 namespace CricketCrickey_
 {
-    class Model
+    internal class Model
     {
-        Random rnd = new Random();
+        int TotalScore = 0;
 
-        public void StraightDrive()
+        private Random rnd = new Random();
+
+       
+        
+        public int StraightDrive()
         {
-            int X = rnd.Next(0, 3);
+            int X = rnd.Next(0, 11);
 
-            if (X )
+            if (X == 1)
+            {
+                return 6;
+            }
 
+            if (X > 1 && X < 4)
+            {
+                return 4;
+            }
 
+            return 1;
+            
 
         }
-
 
     }
 }
