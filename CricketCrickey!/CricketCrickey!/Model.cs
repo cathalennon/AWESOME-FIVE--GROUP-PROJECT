@@ -8,5 +8,17 @@ namespace CricketCrickey_
 {
     class Model
     {
+        Random rnd = new Random();
+
+        public void StraightDrive()
+        {
+            
+
+
+
+
+        }
+
+
     }
 }
