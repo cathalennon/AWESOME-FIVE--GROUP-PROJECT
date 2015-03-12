@@ -30,7 +30,7 @@ namespace CricketCrickey_
             return playerName;
         }
 
-<<<<<<< HEAD
+
         public void PlayerInstructions()
         {
 
@@ -50,16 +50,18 @@ namespace CricketCrickey_
 
         }
 
+        
 
-       
-
-=======
         public void PlayerScore(int score, int outs)
         {
             Console.WriteLine("Score/Number of Outs");
             Console.WriteLine(" {0} /{1}", score,outs);
         }
             
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin
 >>>>>>> origin
 >>>>>>> origin
     }
