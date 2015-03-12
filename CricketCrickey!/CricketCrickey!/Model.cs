@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,22 @@ namespace CricketCrickey_
 {
     internal class Model
     {
+<<<<<<< HEAD
+
+
+        public bool OptionToBat()
+        {
+            int coin = 1;
+
+            if (coin == 1)
+            {
+                return true;
+            }
+
+            return false;
+
+        }
+=======
         int TotalScore = 0;
 
         private Random rnd = new Random();
@@ -85,5 +102,6 @@ namespace CricketCrickey_
 
         }
 
+>>>>>>> origin
     }
 }

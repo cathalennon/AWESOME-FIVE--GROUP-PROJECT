@@ -10,6 +10,17 @@ namespace CricketCrickey_
     {
 
 
+<<<<<<< HEAD
+
+
+        public void OptionChosen(Model x)
+        {
+            if (x.OptionToBat())
+            {
+                Console.WriteLine("Cograts!!! You have Chosen To bat "); 
+            }
+        }
+=======
         public string Welcome()
         {
             Console.WriteLine("Welcome to Super Awesome Cricket by Awesone Five");
@@ -47,6 +58,11 @@ namespace CricketCrickey_
             Console.WriteLine(" {0} /{1}", score,outs);
         }
             
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin
+>>>>>>> origin
+>>>>>>> origin
     }
 }
