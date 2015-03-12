@@ -12,8 +12,9 @@ namespace CricketCrickey_
 
         public void StraightDrive()
         {
-            
+            int X = rnd.Next(0, 3);
 
+            if (X )
 
 
 

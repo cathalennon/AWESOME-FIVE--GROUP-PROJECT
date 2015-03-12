@@ -8,8 +8,17 @@ namespace CricketCrickey_
 {
     class View
     {
-<<<<<<< HEAD
-        
+
+
+        public string Welcome()
+        {
+            Console.WriteLine("Welcome to Super Awesome Cricket by Awesone Five");
+            Console.WriteLine("What is your Name?");
+            string playerName = Console.ReadLine();
+            Console.WriteLine("Lets play cricket " + playerName);
+            return playerName;
+        }
+
         public void PlayerInstructions()
         {
 
@@ -29,15 +38,8 @@ namespace CricketCrickey_
 
         }
 
-=======
-        public string Welcome()
-        {
-            Console.WriteLine("Welcome to Super Awesome Cricket by Awesone Five");
-            Console.WriteLine("What is your Name?");
-            string playerName = Console.ReadLine();
-            Console.WriteLine("Lets play cricket " + playerName);
-            return playerName;
-        }
->>>>>>> origin
+
+       
+
     }
 }
