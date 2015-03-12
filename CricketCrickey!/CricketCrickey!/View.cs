@@ -16,5 +16,12 @@ namespace CricketCrickey_
             Console.WriteLine("Lets play cricket " + playerName);
             return playerName;
         }
+
+        public void PlayerScore(int score, int outs)
+        {
+            Console.WriteLine("Score/Number of Outs");
+            Console.WriteLine(" {0} /{1}", score,outs);
+        }
+            
     }
 }
