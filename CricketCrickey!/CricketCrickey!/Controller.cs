@@ -26,6 +26,16 @@ namespace CricketCrickey_
                 model.ShotAssign(view.ShotChoice());
                 view.PlayerScore(model.TotalScore, model.Outs);
             }
+
+            if (model.IsOut())
+            {
+                view.SayOut();
+            }
+
+            else
+            {
+                
+            }
         }
     }
 }

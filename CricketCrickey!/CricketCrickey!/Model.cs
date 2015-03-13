@@ -2,38 +2,71 @@
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CricketCrickey_
 {
-    internal class Model
+    public class Model
     {
 
 
         private Random rnd = new Random();
         public int TotalScore { get; set; }
         public int Outs { get; set; }
-        public string UserSelection { get; set; }
+        public int Temp { get; set; }
 
 
 
-        
+
+
+
 
         public Model()
         {
             TotalScore = 0;
+            Outs = 0;
         }
 
         public bool OptionToBat()
         {
 
-                return true;
+            return true;
 
         }
 
+
+
+        public bool IsOut()
+        {
+
+            Temp = rnd.Next(0, 11);
+
+            if (Temp == 1)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         
-        
+
+        public bool EndGame()
+        {
+
+            if (Outs == 4)
+            {
+                return true;
+            }
+            return false;
+            
+        }
+
+
+
+
 
         public void ShotAssign(string input)
         {
