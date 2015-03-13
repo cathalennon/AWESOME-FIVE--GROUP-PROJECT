@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Configuration;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -61,7 +62,7 @@ namespace CricketCrickey_
         }
 
 
-    public void PlayerScore(int score, int outs)
+        public void PlayerScore(int score, int outs)
         {
             Console.WriteLine("Score/Number of Outs");
             Console.WriteLine(" {0} / {1}", score,outs);
@@ -73,6 +74,30 @@ namespace CricketCrickey_
             Console.Write("Choice: ");
             return Console.ReadLine();
    
+        }
+
+      
+
+        public void SayOut()
+        {
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.WriteLine("HowZatttt!!!!!!!!");
+            Console.WriteLine("Thats OUT!!!!!!!!!!");
+            Console.WriteLine("Press any key to continue");
+            Console.ReadKey();
+            Console.ResetColor();
+            Console.Clear();
+        }
+
+        public void GameOver()
+        {
+            Console.WriteLine("That's the end of the game!");
+            Console.ReadLine();
+            Console.WriteLine("How is the taste of defeat........?");
+            Console.ReadLine();
+            Console.WriteLine("Everyone is leaving the ground, time to close.......");
+            
         }
 
     }

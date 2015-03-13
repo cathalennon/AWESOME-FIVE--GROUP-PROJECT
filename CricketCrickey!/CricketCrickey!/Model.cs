@@ -2,12 +2,13 @@
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CricketCrickey_
 {
-    internal class Model
+    public class Model
     {
 
         private Random rnd = new Random();
@@ -17,7 +18,7 @@ namespace CricketCrickey_
 
         public int BallsLeft { get; set; }
         public int Outs { get; set; }
-        public string UserSelection { get; set; }
+        public int Temp { get; set; }
 
 
 
@@ -25,14 +26,41 @@ namespace CricketCrickey_
         {
             TotalScore = 0;
             BallsLeft = 30;
+            Outs = 0;
         }
 
         public bool OptionToBat()
         {
-
-                return true;
-
+            return true;
         }
+
+
+        public bool IsOut()
+        {
+
+            Temp = rnd.Next(0, 11);
+
+            if (Temp == 1)
+            {
+                Outs ++;
+                return true;
+            }
+
+            return false;
+        }
+
+
+        public bool EndGame()
+        {
+
+            if (Outs == 3 || BallsLeft == 0)
+            {
+                return true;
+            }
+            return false;
+            
+        }
+
 
 
         public void ShotAssign(string input)
@@ -42,18 +70,22 @@ namespace CricketCrickey_
                 case "1":
                     TotalScore += StraightDrive();
                     BallsLeft -= 1;
+                    Console.WriteLine("You hit a " + StraightDrive() + "!");
                     break;
                 case "2":
                     TotalScore += CoverDrive();
                     BallsLeft -= 1;
+                    Console.WriteLine("You hit a " + CoverDrive() + "!");
                     break;
                 case "3":
                     TotalScore += ReverseSweep();
                     BallsLeft -= 1;
+                    Console.WriteLine("You hit a " + ReverseSweep() + "!");
                     break;
                 case "4":
                     TotalScore += Slog();
                     BallsLeft -= 1;
+                    Console.WriteLine("You hit a " + Slog() + "!");
                     break;
                 default:
                     Console.WriteLine("Sorry you can only chose 1 , 2 , 3 or 4!");

@@ -22,15 +22,24 @@ namespace CricketCrickey_
 
         public void Play()
         {
-            while (true)
+            while (!model.EndGame())
             {
+                if (model.IsOut())
+                {
+                    view.SayOut();
+                }
                 model.ShotAssign(view.ShotChoice());
-                Console.WriteLine(model.BallsLeft);
+                Console.WriteLine("You have " + model.BallsLeft + " balls left on your face");
                 Console.ReadKey();
-                
                 Console.Clear();
                 view.PlayerScore(model.TotalScore, model.Outs);
             }
+
+            if (model.EndGame())
+            {
+                view.GameOver();
+            }
+
         }
     }
 }
