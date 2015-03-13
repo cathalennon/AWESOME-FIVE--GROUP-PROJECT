@@ -9,7 +9,9 @@ namespace CricketCrickey_
 {
     internal class Model
     {
-<<<<<<< HEAD
+
+        public int Score { get; set; }
+
 
 
         public bool OptionToBat()
@@ -24,7 +26,7 @@ namespace CricketCrickey_
             return false;
 
         }
-=======
+
         int TotalScore = 0;
 
         private Random rnd = new Random();
@@ -102,6 +104,6 @@ namespace CricketCrickey_
 
         }
 
->>>>>>> origin
+
     }
 }
