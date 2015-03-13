@@ -17,25 +17,29 @@ namespace CricketCrickey_
             view.Welcome();
             view.OptionChosen(model);
             view.PlayerInstructions();
+            view.ReadyToPlay();
         }
 
         public void Play()
         {
             while (!model.EndGame())
             {
+                if (model.IsOut())
+                {
+                    view.SayOut();
+                }
                 model.ShotAssign(view.ShotChoice());
+                Console.WriteLine("You have " + model.BallsLeft + " balls left on your face");
+                Console.ReadKey();
+                Console.Clear();
                 view.PlayerScore(model.TotalScore, model.Outs);
             }
 
-            if (model.IsOut())
+            if (model.EndGame())
             {
-                view.SayOut();
+                view.GameOver();
             }
 
-            else
-            {
-                
-            }
         }
     }
 }

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Configuration;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CricketCrickey_
 {
-    class View
+    internal class View
     {
 
         public void OptionChosen(Model x)
@@ -18,7 +19,7 @@ namespace CricketCrickey_
                 Console.WriteLine("To make your choice, either type: heads or tails . And hit enter!");
                 Console.ReadLine();
                 x.OptionToBat();
-                Console.WriteLine("Congrats!!! You have Chosen To bat "); 
+                Console.WriteLine("Congrats!!! You have Chosen To bat ");
             }
         }
 
@@ -35,11 +36,13 @@ namespace CricketCrickey_
         public void PlayerInstructions()
         {
 
-            Console.WriteLine("Please read the instructions below to understand how this game works, hit enter to flow through");
+            Console.WriteLine(
+                "Please read the instructions below to understand how this game works, hit enter to flow through");
             Console.ReadLine();
             Console.WriteLine("You, the player have flipped and are now batting");
             Console.ReadLine();
-            Console.WriteLine("You will enter a number between 1 and 4, this will correspond to the type of shot you produce");
+            Console.WriteLine(
+                "You will enter a number between 1 and 4, this will correspond to the type of shot you produce");
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Pressing 1 will produce a straight drive, hitting down the ground with power");
@@ -52,31 +55,44 @@ namespace CricketCrickey_
 
         }
 
-       
+        public void ReadyToPlay()
+        {
+            Console.Clear();
+            Console.WriteLine("Hey, are you ready to go?! Choose your first shot. The game is in your hands.");
+        }
+
+
         public void PlayerScore(int score, int outs)
         {
             Console.WriteLine("Score/Number of Outs");
-            Console.WriteLine(" {0} /{1}", score,outs);
+            Console.WriteLine(" {0} / {1}", score,outs);
         }
 
         public string ShotChoice()
         {
-            Console.WriteLine("Choose 1,2,3 or 4");
+            Console.WriteLine("Choose 1 , 2 , 3 or 4");
+            Console.Write("Choice: ");
             return Console.ReadLine();
    
         }
 
+      
+
         public void SayOut()
         {
-
-            Console.WriteLine("HowZatttt!!!!!!!!");
             Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.WriteLine("HowZatttt!!!!!!!!");
             Console.WriteLine("Thats OUT!!!!!!!!!!");
+            Console.WriteLine("Press any key to continue");
+            Console.ReadKey();
+            Console.ResetColor();
+            Console.Clear();
         }
 
         public void GameOver()
         {
-            Console.WriteLine("That's the last wicket to fall");
+            Console.WriteLine("That's the end of the game!");
             Console.ReadLine();
             Console.WriteLine("How is the taste of defeat........?");
             Console.ReadLine();
