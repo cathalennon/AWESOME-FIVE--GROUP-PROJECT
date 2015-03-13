@@ -9,15 +9,16 @@ namespace CricketCrickey_
 {
     internal class Model
     {
-<<<<<<< HEAD
-=======
 
-        public int Score { get; set; }
-
->>>>>>> origin
 
         private Random rnd = new Random();
         public int TotalScore { get; set; }
+        public int Outs { get; set; }
+        public string UserSelection { get; set; }
+
+
+
+        
 
         public Model()
         {
@@ -30,14 +31,9 @@ namespace CricketCrickey_
                 return true;
 
         }
-<<<<<<< HEAD
-=======
 
-        int TotalScore = 0;
-
-        private Random rnd = new Random();
-
->>>>>>> origin
+        
+        
 
         public void ShotAssign(string input)
         {
