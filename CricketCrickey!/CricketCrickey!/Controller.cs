@@ -29,7 +29,7 @@ namespace CricketCrickey_
                 Console.ReadKey();
                 
                 Console.Clear();
-                view.PlayerScore(model.TotalScore, 0);
+                view.PlayerScore(model.TotalScore, model.Outs);
             }
         }
     }
