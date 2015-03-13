@@ -10,8 +10,17 @@ namespace CricketCrickey_
     {
 
         Model model = new Model();
-
         View view = new View();
 
+        public Controller()
+        {
+            view.Welcome();
+            view.PlayerInstructions();
+        }
+
+        public void Play()
+        {
+            
+        }
     }
 }

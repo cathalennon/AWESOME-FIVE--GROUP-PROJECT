@@ -9,8 +9,9 @@ namespace CricketCrickey_
 {
     internal class Model
     {
-<<<<<<< HEAD
 
+        private Random rnd = new Random();
+        int TotalScore = 0;
 
         public bool OptionToBat()
         {
@@ -24,11 +25,6 @@ namespace CricketCrickey_
             return false;
 
         }
-=======
-        int TotalScore = 0;
-
-        private Random rnd = new Random();
-
 
 
         public int StraightDrive()
@@ -102,6 +98,6 @@ namespace CricketCrickey_
 
         }
 
->>>>>>> origin
+
     }
 }
