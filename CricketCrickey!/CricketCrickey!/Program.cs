@@ -12,6 +12,7 @@ namespace CricketCrickey_
         {
 
             Controller controller = new Controller();
+            controller.Play();
             Console.ReadKey();
         }
     }

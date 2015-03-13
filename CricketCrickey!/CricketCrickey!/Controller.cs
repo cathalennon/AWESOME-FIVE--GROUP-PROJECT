@@ -17,14 +17,19 @@ namespace CricketCrickey_
             view.Welcome();
             view.OptionChosen(model);
             view.PlayerInstructions();
+            view.ReadyToPlay();
         }
 
         public void Play()
         {
-            while (!model.EndGame())
+            while (true)
             {
                 model.ShotAssign(view.ShotChoice());
-                view.PlayerScore(model.TotalScore, model.Outs);
+                Console.WriteLine(model.BallsLeft);
+                Console.ReadKey();
+                
+                Console.Clear();
+                view.PlayerScore(model.TotalScore, 0);
             }
         }
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CricketCrickey_
 {
-    class View
+    internal class View
     {
 
         public void OptionChosen(Model x)
@@ -18,7 +18,7 @@ namespace CricketCrickey_
                 Console.WriteLine("To make your choice, either type: heads or tails . And hit enter!");
                 Console.ReadLine();
                 x.OptionToBat();
-                Console.WriteLine("Congrats!!! You have Chosen To bat "); 
+                Console.WriteLine("Congrats!!! You have Chosen To bat ");
             }
         }
 
@@ -35,11 +35,13 @@ namespace CricketCrickey_
         public void PlayerInstructions()
         {
 
-            Console.WriteLine("Please read the instructions below to understand how this game works, hit enter to flow through");
+            Console.WriteLine(
+                "Please read the instructions below to understand how this game works, hit enter to flow through");
             Console.ReadLine();
             Console.WriteLine("You, the player have flipped and are now batting");
             Console.ReadLine();
-            Console.WriteLine("You will enter a number between 1 and 4, this will correspond to the type of shot you produce");
+            Console.WriteLine(
+                "You will enter a number between 1 and 4, this will correspond to the type of shot you produce");
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Pressing 1 will produce a straight drive, hitting down the ground with power");
@@ -52,16 +54,23 @@ namespace CricketCrickey_
 
         }
 
-       
-        public void PlayerScore(int score, int outs)
+        public void ReadyToPlay()
+        {
+            Console.Clear();
+            Console.WriteLine("Hey, are you ready to go?! Choose your first shot. The game is in your hands.");
+        }
+
+
+    public void PlayerScore(int score, int outs)
         {
             Console.WriteLine("Score/Number of Outs");
-            Console.WriteLine(" {0} /{1}", score,outs);
+            Console.WriteLine(" {0} / {1}", score,outs);
         }
 
         public string ShotChoice()
         {
-            Console.WriteLine("Choose 1,2,3 or 4");
+            Console.WriteLine("Choose 1 , 2 , 3 or 4");
+            Console.Write("Choice: ");
             return Console.ReadLine();
    
         }

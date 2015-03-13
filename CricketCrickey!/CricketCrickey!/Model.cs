@@ -9,19 +9,17 @@ namespace CricketCrickey_
 {
     internal class Model
     {
-<<<<<<< HEAD
-=======
-
-        public int Score { get; set; }
-
->>>>>>> origin
-
+        
         private Random rnd = new Random();
+        
+        public int Score { get; set; }
         public int TotalScore { get; set; }
+        public int BallsLeft { get; set; }
 
         public Model()
         {
             TotalScore = 0;
+            BallsLeft = 30;
         }
 
         public bool OptionToBat()
@@ -30,14 +28,7 @@ namespace CricketCrickey_
                 return true;
 
         }
-<<<<<<< HEAD
-=======
 
-        int TotalScore = 0;
-
-        private Random rnd = new Random();
-
->>>>>>> origin
 
         public void ShotAssign(string input)
         {
@@ -45,15 +36,22 @@ namespace CricketCrickey_
             {
                 case "1":
                     TotalScore += StraightDrive();
+                    BallsLeft -= 1;
                     break;
                 case "2":
                     TotalScore += CoverDrive();
+                    BallsLeft -= 1;
                     break;
                 case "3":
                     TotalScore += ReverseSweep();
+                    BallsLeft -= 1;
                     break;
                 case "4":
                     TotalScore += Slog();
+                    BallsLeft -= 1;
+                    break;
+                default:
+                    Console.WriteLine("Sorry you can only chose 1 , 2 , 3 or 4!");
                     break;
             }
         }
