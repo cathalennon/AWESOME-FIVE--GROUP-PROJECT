@@ -11,21 +11,38 @@ namespace CricketCrickey_
     {
 
         private Random rnd = new Random();
-        int TotalScore = 0;
+        public int TotalScore { get; set; }
+
+        public Model()
+        {
+            TotalScore = 0;
+        }
 
         public bool OptionToBat()
         {
-            int coin = 1;
 
-            if (coin == 1)
-            {
                 return true;
-            }
-
-            return false;
 
         }
 
+        public void ShotAssign(string input)
+        {
+            switch (input)
+            {
+                case "1":
+                    TotalScore += StraightDrive();
+                    break;
+                case "2":
+                    TotalScore += CoverDrive();
+                    break;
+                case "3":
+                    TotalScore += ReverseSweep();
+                    break;
+                case "4":
+                    TotalScore += Slog();
+                    break;
+            }
+        }
 
         public int StraightDrive()
         {

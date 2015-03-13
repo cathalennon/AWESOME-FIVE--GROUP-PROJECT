@@ -15,12 +15,17 @@ namespace CricketCrickey_
         public Controller()
         {
             view.Welcome();
+            view.OptionChosen(model);
             view.PlayerInstructions();
         }
 
         public void Play()
         {
-            
+            while (!model.EndGame())
+            {
+                model.ShotAssign(view.ShotChoice());
+                view.PlayerScore(model.TotalScore, model.Outs);
+            }
         }
     }
 }
