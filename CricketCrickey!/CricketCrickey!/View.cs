@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,18 +10,18 @@ namespace CricketCrickey_
     class View
     {
 
-
-<<<<<<< HEAD
-
-
         public void OptionChosen(Model x)
         {
             if (x.OptionToBat())
             {
-                Console.WriteLine("Cograts!!! You have Chosen To bat "); 
+                Console.WriteLine("We are about to flip the coin to decide who is batting and who is bowling.");
+                Console.WriteLine("To make your choice, either type: heads or tails . And hit enter!");
+                Console.ReadLine();
+                x.OptionToBat();
+                Console.WriteLine("Congrats!!! You have Chosen To bat "); 
             }
         }
-=======
+
         public string Welcome()
         {
             Console.WriteLine("Welcome to Super Awesome Cricket by Awesone Five");
@@ -39,30 +40,31 @@ namespace CricketCrickey_
             Console.WriteLine("You, the player have flipped and are now batting");
             Console.ReadLine();
             Console.WriteLine("You will enter a number between 1 and 4, this will correspond to the type of shot you produce");
+            Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("A 1 will produce a straight drive, hitting down the ground with power");
+            Console.WriteLine("Pressing 1 will produce a straight drive, hitting down the ground with power");
             Console.ReadLine();
-            Console.WriteLine("A 2 will produce a cover drive, a classy cricket shot, Hit it BRUDDAA!!!");
+            Console.WriteLine("Pressing 2 will produce a cover drive, a classy cricket shot, Hit it BRUDDAA!!!");
             Console.ReadLine();
-            Console.WriteLine("A 3 will produce a reverse sweep, a risky shot, but one that gets the crowd going");
+            Console.WriteLine("Pressing 3 will produce a reverse sweep, a risky shot, but one that gets the crowd going");
             Console.ReadLine();
-            Console.WriteLine("A 4 will produce a slog, who do you you think you are, Brendon McCullum?");
+            Console.WriteLine("Pressing 4 will produce a slog, who do you you think you are, Brendon McCullum?");
 
         }
 
-        
-
+       
         public void PlayerScore(int score, int outs)
         {
             Console.WriteLine("Score/Number of Outs");
             Console.WriteLine(" {0} /{1}", score,outs);
         }
-            
-<<<<<<< HEAD
 
-=======
->>>>>>> origin
->>>>>>> origin
->>>>>>> origin
+        public string ShotChoice()
+        {
+            Console.WriteLine("Choose 1,2,3 or 4");
+            return Console.ReadLine();
+   
+        }
+
     }
 }
