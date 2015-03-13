@@ -66,5 +66,23 @@ namespace CricketCrickey_
    
         }
 
+        public void SayOut()
+        {
+
+            Console.WriteLine("HowZatttt!!!!!!!!");
+            Console.Clear();
+            Console.WriteLine("Thats OUT!!!!!!!!!!");
+        }
+
+        public void GameOver()
+        {
+            Console.WriteLine("That's the last wicket to fall");
+            Console.ReadLine();
+            Console.WriteLine("How is the taste of defeat........?");
+            Console.ReadLine();
+            Console.WriteLine("Everyone is leaving the ground, time to close.......");
+            
+        }
+
     }
 }
